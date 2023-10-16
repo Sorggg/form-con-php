@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Form di Registrazione</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/script.js"></script>
+
+</head>
+<body>
+    <form id="registrationForm" onsubmit="return validateForm()" action="codice_personale.php" method="post">
+        <label for="name">Cognome e Nome:</label><br>
+        <input type="text" id="name" name="name" maxlength="50"><br><br>
+
+        <label>Sesso:</label><br>
+        <input type="radio" id="male" name="gender" value="M"><label for="male">Maschio</label><br>
+        <input type="radio" id="female" name="gender" value="F"><label for="female">Femmina</label><br><br>
+
+        <label for="birthplace">Luogo di nascita:</label><br>
+        <select id="birthplace" name="birthplace">
+            <option value="Verona">Verona</option>
+            <option value="Venezia">Venezia</option>
+            <option value="Padova">Padova</option>
+            <option value="Treviso">Treviso</option>
+            <option value="Rovigo">Rovigo</option>
+        </select><br><br>
+
+        <label for="birthdate">Anno di nascita:</label><br>
+        <input type="text" id="birthdate" name="birthdate"><br><br>
+
+        <label for="university">Ateneo:</label><br>
+        <select id="university" name="university">
+            <option value="Universita_di_Verona">Università di Verona</option>
+            <option value="Universita_di_Venezia">Università di Venezia</option>
+            <option value="Universita_di_Padova">Università di Padova</option>
+        </select><br><br>
+
+        <label for="CAP">CAP:</label><br>
+        <input type="text" id="CAP" name="CAP" maxlength="5"><br><br>
+
+        <label for="workingStudent">Studente Lavoratore:</label><br>
+        <input type="checkbox" id="workingStudent" name="workingStudent" onclick="toggleJobDescription()"><br><br>
+
+        <label for="jobDescription">Descrizione del Lavoro:</label><br>
+        <input type="text" id="jobDescription" name="jobDescription" maxlength="80" disabled><br><br>
+
+        <input type="submit" value="Invia">
+        <input type="reset" value="Resetta">
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
